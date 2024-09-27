@@ -8,11 +8,11 @@ interface ButtonProps {
     children?: React.ReactNode
 }
 
-export const Button = ({className, type, visual, href, children}: ButtonProps) =>{
+export const Button = ({className = "", type, visual, href, children}: ButtonProps) =>{
     switch (type) {
         case "link":
             return (
-                <a href={href} className={className + ""}>{children}</a>
+                <a href={href} className={className + " " + styles.link}>{children}</a>
             );
             break;
 

@@ -1,3 +1,26 @@
 .button {
     
 }
+
+.link {
+    position: relative;
+}
+
+.link::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-radius: 2px;
+    background-color: black;
+    top: 110%;
+    left: 0%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transform-origin: center center;
+    transition-timing-function: ease-in-out;
+}
+
+.link:hover::after {
+    transform: translateY(4px);
+}
