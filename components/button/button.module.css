@@ -1,5 +1,28 @@
 .button {
+    position: relative;
+}
+
+.button.standard {
     
+}
+
+.button.styled::before {
+    content: " ";
+    position: absolute;
+    width: 103.5%;
+    height: 109%;
+    top: -4.5%;
+    left: -1.75%;
+    transform: rotate(-5deg);
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transform-origin: center center;
+    transition-timing-function: ease-in-out;
+    z-index: -1;
+}
+
+.button.styled:hover::before {
+    transform: rotate(3deg);
 }
 
 .link {
