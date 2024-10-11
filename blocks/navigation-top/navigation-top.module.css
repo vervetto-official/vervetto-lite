@@ -1,0 +1,25 @@
+.nav {
+    width: 100%;
+}
+
+@media screen and (max-width: 767px){
+    .nav ul {
+        transition-duration: 0.5s;
+        transition-property: display;
+    }
+    
+    .nav ul.open {
+        display: flex;
+        position: fixed;
+        top: 118px;
+        left: 0;
+        background: white;
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        z-index: 99;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+        
+}

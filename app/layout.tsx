@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Comfortaa } from "next/font/google";
+
+import "./libs/hamburgers/hamburgers.min.css";
 import "./globals.css";
 
 const montserrat = Montserrat({ 
