@@ -1,16 +1,32 @@
+import { text } from "stream/consumers";
+
 export const config = {
     navigationMenu: [
         {
             text: "Home",
-            link: "#"
+            link: "/"
+        },
+        {
+            hasChild: true,
+            text: "Features",
+            children: [
+                {
+                    text: "Hello",
+                    link: "#"
+                },
+                {
+                    text: "Hi",
+                    link: "#"
+                }
+            ]
         },
         {
             text: "About",
-            link: "#"
+            link: "/about"
         },
         {
             text: "Contact",
-            link: "#"
+            link: "/contact"
         }
     ]
 }
