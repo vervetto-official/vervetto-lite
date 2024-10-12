@@ -2,12 +2,12 @@
     width: 100%;
 }
 
-.hasChild a {
+.hasChild > a {
     position: relative;
     margin-right: 15px;
 }
 
-.hasChild a::after {
+.hasChild > a::after {
     content: "";
     position: absolute;
     background-image: url("/icons/down-arrow.svg");
@@ -25,7 +25,7 @@
     transition-property: transform;
 }
 
-.hasChild:hover a::after{
+.hasChild:hover > a::after{
     position: absolute;
     left: 100%;
     top: 50%;

@@ -46,7 +46,9 @@ export const NavigationTop = ({ className  = "" } : NavigationTopProperties) => 
                                         <ul className="child-nav">
                                             {item.children.map((childItem, childIndex) => {
                                                 return (
-                                                    <li key={"child-item" + childIndex}></li>
+                                                    <li key={"child-item" + childIndex} className="child-item">
+                                                        <Link href={childItem.link}>{childItem.text}</Link>
+                                                    </li>
                                                 );
                                             })}
                                         </ul>
