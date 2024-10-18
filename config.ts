@@ -11,8 +11,8 @@ export const config = {
             text: "Features",
             children: [
                 {
-                    text: "Hello",
-                    link: "#"
+                    text: "Hello World!",
+                    link: "/about"
                 },
                 {
                     text: "Hi",

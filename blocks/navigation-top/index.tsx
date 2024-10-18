@@ -27,12 +27,12 @@ export const NavigationTop = ({ className  = "" } : NavigationTopProperties) => 
                 <Link href={"/"} className="logo">
                     <Image src={"/vervetto-logo.svg"} width={34} height={34} alt="V."/>
                 </Link>
-                <ul className={ "list-none flex-wrap items-center justify-center gap-8 hidden lg:flex " + (isOpen ? styles.open : "") }>
+                <ul className={ "list-none flex-wrap items-center justify-center gap-4 hidden lg:flex " + (isOpen ? styles.open : "") }>
                     {
                         navMenuItems.map((item, index) => {
                             if(!item.hasChild) {
                                 return (
-                                    <li key={index}>
+                                    <li key={index} className={styles.navItem + " hover:bg-black/10 py-1.5 px-4 rounded-md"}>
                                         <Link href={item.link}>
                                             {item.text}
                                         </Link>
@@ -41,13 +41,13 @@ export const NavigationTop = ({ className  = "" } : NavigationTopProperties) => 
                             }
                             else {
                                 return (
-                                    <li className={styles.hasChild}>
+                                    <li className={styles.hasChild + " hover:bg-black/10 py-1.5 pl-4 pr-5 rounded-md"}>
                                         <Link href={"#"}>{item.text}</Link>
-                                        <ul className="child-nav">
+                                        <ul className={styles.childNav + " absolute min-w-max bg-white rounded-b-md shadow px-1.5 py-2.5"}>
                                             {item.children.map((childItem, childIndex) => {
                                                 return (
-                                                    <li key={"child-item" + childIndex} className="child-item">
-                                                        <Link href={childItem.link}>{childItem.text}</Link>
+                                                    <li key={"child-item" + childIndex} className={ styles.navItem + " min-w-40 rounded-md py-2 px-4 hover:bg-gray-100"}>
+                                                        <Link href={childItem.link} className="w-full flex">{childItem.text}</Link>
                                                     </li>
                                                 );
                                             })}

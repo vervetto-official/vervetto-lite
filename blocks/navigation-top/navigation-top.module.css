@@ -2,6 +2,15 @@
     width: 100%;
 }
 
+.navItem {
+    position: relative;
+}
+
+.hasChild {
+    position: relative;
+    overflow: visible;
+}
+
 .hasChild > a {
     position: relative;
     margin-right: 15px;
@@ -31,6 +40,21 @@
     top: 50%;
     transform: translateY(-50%) rotateZ(-180deg);
     margin-left: 10px;
+}
+
+.hasChild .childNav {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    top: calc(100% + 22px);
+    left: 0;
+    transition-duration: 0.3s;
+    transition-property: visibility;
+    z-index: 1;
+}
+
+.hasChild:hover .childNav {
+    visibility: visible;
 }
 
 
