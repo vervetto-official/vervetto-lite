@@ -34,7 +34,7 @@ export const NavigationTop = ({ className  = "" } : NavigationTopProperties) => 
                                 if(!item.hasChild) {
                                     return (
                                         <li key={index} className={styles.navItem + " lg:hover:bg-black/10 py-5 lg:py-1.5 pl-0 lg:px-4 rounded-md border-b border-gray-200 lg:border-0 last:border-0"}>
-                                            <Link href={item.link}>
+                                            <Link href={item.link ? item.link : "#"}>
                                                 {item.text}
                                             </Link>
                                         </li>
