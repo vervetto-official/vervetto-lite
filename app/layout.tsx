@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat, Comfortaa } from "next/font/google";
+
+import "./libs/hamburgers/hamburgers.min.css";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ 
+  subsets: ["latin"],
+  variable: '--font-montserrat'
+});
+const comfortaa = Comfortaa({ 
+  subsets: ["latin"],
+  variable: '--font-comfortaa'
+});
 
 export const metadata: Metadata = {
   title: "Vervetto",
@@ -16,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${montserrat.variable} ${comfortaa.variable}`}>{children}</body>
     </html>
   );
 }
