@@ -77,7 +77,24 @@
 
     .nav .navWrapper.open * {
         display: flex;
+        text-wrap: wrap;
         width: 100%;
+    }
+
+    .nav .navWrapper.open .hasChild .childNav {
+        display: none;
+        transition-duration: 0.3s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+    }
+
+    .nav .navWrapper.open .hasChild:hover .childNav,
+    .nav .navWrapper.open .hasChild.expanded .childNav {
+        display: flex;
+        left: 0;
+        width: 100%;
+        top: 0%;
+        margin-top: 20px;
     }
         
 }
