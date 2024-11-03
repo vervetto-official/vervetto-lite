@@ -18,6 +18,11 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+  font-family: var(--font-montserrat);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-comfortaa);
 }
 
 @layer utilities {
